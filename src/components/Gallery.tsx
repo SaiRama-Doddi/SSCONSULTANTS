@@ -10,7 +10,7 @@ interface GalleryImage {
 
 function Gallery() {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
-  const [activeFilter, setActiveFilter] = useState('all');
+
 
   const images: GalleryImage[] = [
     {
