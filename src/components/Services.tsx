@@ -120,7 +120,7 @@ function Services() {
   const categories = [
     
     "Architectural Design",
-    "Statutory Designs",
+    "Statutory Approvals",
     "Engineering Consultants",
     "Contracts",
   ];

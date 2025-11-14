@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollBottomToTop from './components/ScrollBottomToTop';
+import ContactInfo from './components/ContactInfo';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -31,6 +32,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
+      <ContactInfo/>
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
      <ScrollToTop dependency={activeSection} />
 

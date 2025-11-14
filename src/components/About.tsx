@@ -1,5 +1,6 @@
 import { Target, Eye, Award, Users } from "lucide-react";
 import TeamSection from "./TeamSection";
+import DirectorMessage from "./DirectorMessage";
 
 function About() {
   return (
@@ -93,6 +94,7 @@ function About() {
   </div>
 </div>
 
+<DirectorMessage/>
 
 <TeamSection/>
 
@@ -133,22 +135,15 @@ function About() {
         </div>
 
         {/* ISO SECTION */}
-        <div className="bg-[#29387D] text-white rounded-xl p-12">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <h3 className="text-3xl font-bold text-[#fd5d14] mb-2">ISO 9001:2015</h3>
-              <p className="text-gray-300">Certified Quality Management</p>
-            </div>
-            <div>
-              <h3 className="text-3xl font-bold text-[#fd5d14] mb-2">LEED Accredited</h3>
-              <p className="text-gray-300">Green Building Expertise</p>
-            </div>
-            <div>
-              <h3 className="text-3xl font-bold text-[#fd5d14] mb-2">Government Approved</h3>
-              <p className="text-gray-300">Licensed Consultancy Services</p>
-            </div>
-          </div>
-        </div>
+    <div className="bg-[#29387D] text-white rounded-xl p-12">
+  <div className="grid place-items-center text-center">
+    <div className="flex flex-col items-center text-center">
+      <h3 className="text-3xl font-bold text-[#fd5d14] mb-2">Government Approved</h3>
+      <p className="text-gray-300">Licensed Structural Engineer</p>
+    </div>
+  </div>
+</div>
+
 
       </div>
     </div>

@@ -10,11 +10,11 @@ function Header({ activeSection, setActiveSection }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'services', label: 'Services' },
-    { id: 'gallery', label: 'Gallery' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'home', label: 'HOME' },
+    { id: 'about', label: 'ABOUT' },
+    { id: 'services', label: 'SERVICES' },
+    { id: 'gallery', label: 'GALLERY' },
+    { id: 'contact', label: 'CONTACT' },
   ];
 
   const handleNavClick = (section: string) => {
@@ -34,7 +34,8 @@ function Header({ activeSection, setActiveSection }: HeaderProps) {
 <img
   src="/logo2.jpg"
   alt="SSconsultants Logo"
-  className="w-64 md:w-72 scale-110 h-auto object-contain"
+  className="w-40 md:w-60 scale-150 h-auto object-contain"
+  style={{ transformOrigin: "left center" }}
 />
 
 
