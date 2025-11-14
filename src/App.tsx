@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollBottomToTop from './components/ScrollBottomToTop';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -14,7 +15,7 @@ function App() {
   const renderSection = () => {
     switch (activeSection) {
       case 'home':
-        return <Home />;
+        return <Home setActiveSection={setActiveSection} />;
       case 'about':
         return <About />;
       case 'services':
@@ -24,7 +25,7 @@ function App() {
       case 'contact':
         return <Contact />;
       default:
-        return <Home />;
+        return <Home setActiveSection={setActiveSection}/>;
     }
   };
 
@@ -35,6 +36,8 @@ function App() {
 
       <main>{renderSection()}</main>
       <Footer setActiveSection={setActiveSection} />
+
+      <ScrollBottomToTop/>
     </div>
   );
 }

@@ -7,8 +7,10 @@ interface Slide {
   title: string;
   description: string;
 }
-
-function Home() {
+interface HomeProps {
+  setActiveSection: (section: string) => void;
+}
+function Home({setActiveSection}: HomeProps) {
   const slides: Slide[] = [
     {
       image: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102296/build3_p26f8e.jpg',
@@ -133,9 +135,13 @@ function Home() {
         commitment and a universal creative approach.
       </p>
 
-      <button className="bg-[#fd5d14] hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-sm transition">
-        KNOW MORE
-      </button>
+     <button
+  onClick={() => setActiveSection("services")}
+  className="bg-[#fd5d14] hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-sm transition cursor-pointer"
+>
+  KNOW MORE
+</button>
+
     </div>
 
     {/* RIGHT IMAGE */}
