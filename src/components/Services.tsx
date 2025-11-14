@@ -118,19 +118,16 @@ function Services() {
   ];
 
   const categories = [
-    "All",
+    
     "Architectural Design",
     "Statutory Designs",
     "Engineering Consultants",
     "Contracts",
   ];
 
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("Architectural Design");
 
-  const filteredServices =
-    activeFilter === "All"
-      ? allServices
-      : allServices.filter((s) => s.category === activeFilter);
+  const filteredServices = allServices.filter((s) => s.category === activeFilter);
 
   return (
     <div className="pt-0">
@@ -169,21 +166,24 @@ function Services() {
           </div>
 
           {/* FILTER BUTTONS */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveFilter(cat)}
-                className={`px-6 py-2 rounded-full border text-sm font-semibold transition-all ${
-                  activeFilter === cat
-                    ? "bg-[#29387D] text-white border-[#29387D]"
-                    : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+  {categories.map((cat) => (
+    <button
+      key={cat}
+      onClick={() => setActiveFilter(cat)}
+      className={`px-8 py-3 rounded-full border text-base md:text-lg font-semibold transition-all
+        ${
+          activeFilter === cat
+            ? "bg-[#29387D] text-white border-[#29387D] shadow-lg scale-105"
+            : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
+        }
+      `}
+    >
+      {cat}
+    </button>
+  ))}
+</div>
+
 
           {/* SERVICE CARDS LIKE YOUR SCREENSHOT */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">

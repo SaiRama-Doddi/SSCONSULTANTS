@@ -108,7 +108,7 @@ function Home({setActiveSection}: HomeProps) {
     {/* LEFT TEXT */}
     <div>
       <h2 className="text-4xl font-bold text-[#29387D] mb-6">
-        About SS Consultants
+        About S.S. CONSULTANTS
       </h2>
 
       <p className="text-gray-700 leading-relaxed mb-5">
