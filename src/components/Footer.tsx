@@ -11,11 +11,11 @@ function Footer({ setActiveSection }: FooterProps) {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-  <img
-  src="/logo.jpg"
+<img
+  src="/logo2.jpg"
   alt="SSconsultants Logo"
-   className="w-32 sm:w-30 md:w-38 h-auto object-contain -my-2"
-  style={{ transformOrigin: "center" }}
+  className="w-40 md:w-48 scale-150 h-auto object-contain"
+  style={{ transformOrigin: "left center" }}
 />
 
             </div>
