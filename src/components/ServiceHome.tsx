@@ -18,8 +18,10 @@ const services = [
     image: "https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 ];
-
-function ServicesHome() {
+interface HomeProps {
+  setActiveSection: (section: string) => void;
+}
+function ServicesHome({setActiveSection}: HomeProps) {
   return (
     <section className="py-16 bg-[#F5F5F5]">
       {/* Heading */}
@@ -33,6 +35,7 @@ function ServicesHome() {
         {services.map((service, index) => (
           <div
             key={index}
+             onClick={() => setActiveSection("services")}
             className="relative group border-2 border-transparent hover:border-[#FD5D14] transition-all duration-300 p-2 bg-[url('/dot-pattern.png')] bg-repeat"
           >
             {/* Image with Dark Overlay */}

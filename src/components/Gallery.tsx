@@ -69,16 +69,7 @@ function Gallery() {
     },
   ];
 
-  const categories = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'architectural', label: 'Architectural' },
-    { id: 'residential', label: 'Residential' },
-    { id: 'engineering', label: 'Engineering' },
-  ];
 
-  const filteredImages = activeFilter === 'all'
-    ? images
-    : images.filter(img => img.category === activeFilter);
 
   return (
     <div className="pt-0 mb-10">
@@ -105,87 +96,66 @@ function Gallery() {
   {/* Content */}
   <div className="relative bg-black/30 z-10 flex flex-col justify-center items-center text-[white] h-full">
     <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg uppercase">
-      Gallery
+      Projects
     </h1>
     <p className="text-md md:text-lg mt-6 drop-shadow-md font-semibold">
-       <span className="text-[#fd5d14]">HOME /  </span>  <span>GALLERY</span>
+       <span className="text-[#fd5d14]">HOME /  </span>  <span>PROJECTS</span>
     </p>
   </div>
 </div>
 
      {/* ⭐ MAIN CONTENT BELOW */}
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 mt-10">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Project Gallery</h1>
-          <div className="w-44 h-1 bg-[#29387D] mx-auto mb-4"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Explore our portfolio of successfully completed projects across various sectors
-          </p>
+    <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div className="text-center mb-14 mt-14"> 
+        <h1 className="text-5xl font-bold text-gray-900 mb-4">SOM OF OUR  <span className='text-[#fd5d14]'>POPULAR</span> <br/> DREAM PROJECTS</h1> 
+        <div className="w-44 h-1 bg-[#29387D] mx-auto mb-4"></div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveFilter(category.id)}
-              className={`px-6 py-2 rounded-full font-medium transition-all cursor-pointer duration-200 ${
-                activeFilter === category.id
-                  ? 'bg-[#29387D] text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
-              }`}
-            >
-              {category.label}
-            </button>
-          ))}
-        </div>
+  {/* GALLERY GRID */}
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+    {images.map((image) => (
+      <div
+        key={image.id}
+        className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+        onClick={() => setSelectedImage(image)}
+      >
+        <img
+          src={image.url}
+          alt={image.title}
+          className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+        />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredImages.map((image) => (
-            <div
-              key={image.id}
-              className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer"
-              onClick={() => setSelectedImage(image)}
-            >
-              <img
-                src={image.url}
-                alt={image.title}
-                className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-white font-semibold text-lg">{image.title}</h3>
-                  <p className="text-gray-300 text-sm capitalize">{image.category}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {selectedImage && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <button
-              className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
-              onClick={() => setSelectedImage(null)}
-            >
-              <X className="w-8 h-8" />
-            </button>
-            <div className="max-w-5xl w-full">
-              <img
-                src={selectedImage.url}
-                alt={selectedImage.title}
-                className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
-              />
-              <div className="text-center mt-4">
-                <h3 className="text-white text-2xl font-bold">{selectedImage.title}</h3>
-                <p className="text-gray-300 capitalize">{selectedImage.category}</p>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* CLEAN HOVER OVERLAY (NO TEXT) */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
       </div>
+    ))}
+  </div>
+
+  {/* IMAGE POPUP MODAL */}
+  {selectedImage && (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+      onClick={() => setSelectedImage(null)}
+    >
+      <button
+        className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
+        onClick={() => setSelectedImage(null)}
+      >
+        <X className="w-8 h-8" />
+      </button>
+
+      <div className="max-w-5xl w-full">
+        <img
+          src={selectedImage.url}
+          alt={selectedImage.title}
+          className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+        />
+      </div>
+    </div>
+  )}
+</div>
+
     </div>
   );
 }

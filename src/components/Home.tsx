@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import {Landmark, Building2, Layers } from "lucide-react";
+
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import ServicesHome from './ServiceHome';
@@ -11,7 +13,7 @@ interface Slide {
 interface HomeProps {
   setActiveSection: (section: string) => void;
 }
-function Home({setActiveSection}: HomeProps) {
+function Homes({setActiveSection}: HomeProps) {
  const slides: Slide[] = [
   {
     image: "https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102296/build3_p26f8e.jpg",
@@ -71,10 +73,19 @@ function Home({setActiveSection}: HomeProps) {
       {/* CENTER CONTENT */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
         
-        {/* Title (smaller + centered) */}
-       <h2 className="text-4xl md:text-5xl font-bold mb-8 uppercase max-w-[700px] md:max-w-[800px] mx-auto leading-tight">
+ {/* ICON ABOVE TITLE */}
+<div className="flex flex-col items-center mb-4">
+  {/* Change icon based on slide index */}
+  {index === 0 && <Landmark className="w-16 h-18 text-[#fd5d14] mb-4" />}
+  {index === 1 && <Building2 className="w-16 h-18 text-[#fd5d14] mb-4" />}
+  {index === 2 && <Layers className="w-16 h-18 text-[#fd5d14] mb-4" />}
+</div>
+
+{/* TITLE */}
+<h2 className="text-4xl md:text-5xl font-bold mb-8 uppercase max-w-[700px] md:max-w-[800px] mx-auto leading-tight">
   {slide.title}
 </h2>
+
 
 
         {/* BUTTON (only one per slide) */}
@@ -189,7 +200,7 @@ function Home({setActiveSection}: HomeProps) {
 
 
 
-<ServicesHome/>
+<ServicesHome setActiveSection={setActiveSection}/>
 
 
 
@@ -232,4 +243,4 @@ function Home({setActiveSection}: HomeProps) {
   );
 }
 
-export default Home;
+export default Homes;
