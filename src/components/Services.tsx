@@ -46,7 +46,7 @@ function Services() {
     {
       id: "statutory-designs",
       title: "MUNICIPAL BUILDING PLANS & APPROVALS",
-      category: "Statutory Designs",
+      category: "Statutory Approvals",
       icon: <FileText className="w-8 h-8" />,
       image:
         "https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763107577/MUNICIPAL_aalkqt.jpg",
@@ -54,7 +54,7 @@ function Services() {
     {
       id: "statutory-designs2",
       title: "INDUSTRIAL BUILDING APPROVALS",
-      category: "Statutory Designs",
+      category: "Statutory Approvals",
       icon: <FileText className="w-8 h-8" />,
       image:
         "https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763107588/MUNICIPAL2_lgo2o9.jpg",
@@ -62,7 +62,7 @@ function Services() {
     {
       id: "statutory-designs3",
       title: "LAYOUT APPROVALS",
-      category: "Statutory Designs",
+      category: "Statutory Approvals",
       icon: <FileText className="w-8 h-8" />,
       image:
         "https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763107588/MUNICIPAL3_sscerj.jpg",
@@ -165,24 +165,32 @@ function Services() {
             <div className="w-24 h-1 bg-[#29387D] mx-auto mb-4"></div>
           </div>
 
-          {/* FILTER BUTTONS */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+    <div className="flex flex-wrap justify-center gap-6 mb-12">
   {categories.map((cat) => (
     <button
       key={cat}
       onClick={() => setActiveFilter(cat)}
-      className={`px-8 py-3 rounded-full border text-base md:text-lg font-semibold transition-all
+      className={`
+        relative px-8 py-3 rounded-full text-base md:text-lg font-semibold 
+        transition-all duration-300 backdrop-blur-md border 
         ${
           activeFilter === cat
-            ? "bg-[#29387D] text-white border-[#29387D] shadow-lg scale-105"
-            : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
+            ? "bg-[#29387D] text-white border-[#29387D] shadow-xl scale-110"
+            : "bg-white/70 text-gray-700 border-gray-300 hover:bg-white hover:shadow-md hover:scale-105"
         }
       `}
     >
-      {cat}
+      {/* Glow Effect Behind Active Button */}
+      {activeFilter === cat && (
+        <span className="absolute inset-0 rounded-full bg-[#29387D] opacity-20 blur-xl"></span>
+      )}
+
+      <span className="relative z-10">{cat}</span>
     </button>
   ))}
 </div>
+
+
 
 
           {/* SERVICE CARDS LIKE YOUR SCREENSHOT */}

@@ -74,55 +74,15 @@ function Contact() {
               className="w-full h-64 object-cover rounded-lg shadow-lg mb-8"
             />
 
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="bg-blue-100 p-3 rounded-lg">
-                  <MapPin className="w-6 h-6 text-[#29387D]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Our Office</h3>
-                  <p className="text-gray-600">
-                   Sai Satya Heights, JNTUK, Nagamallithota junction, Kakinada, Andhra Pradesh 533003
-                    India
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="bg-blue-100 p-3 rounded-lg">
-                  <Phone className="w-6 h-6 text-[#29387D]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                  <p className="text-gray-600">+91 92909 37993</p>
-                  <p className="text-gray-600">+91 83748 47385</p>
-                   <p className="text-gray-600">+91 77300 37993</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="bg-blue-100 p-3 rounded-lg">
-                  <Mail className="w-6 h-6 text-[#29387D]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                  <p className="text-gray-600">ssconsultantskkd@gmail.com</p>
-                  {/* <p className="text-gray-600">contact@ssconsultants.com</p> */}
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="bg-blue-100 p-3 rounded-lg">
-                  <Clock className="w-6 h-6 text-[#29387D]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>
-                  <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-gray-600">Saturday: 9:00 AM - 2:00 PM</p>
-                  <p className="text-gray-600">Sunday: Closed</p>
-                </div>
-              </div>
-            </div>
+         <div className="w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15205.3412782729!2d83.197952!3d17.6816128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1763122390394!5m2!1sen!2sin"
+            className="w-full h-full border-0"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
           </div>
 
           <div className="bg-white p-8 rounded-lg shadow-lg">
@@ -218,19 +178,7 @@ function Contact() {
           </div>
         </div>
 
-        <div className="mt-16">
-          <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg h-96">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.4638431071967!2d72.82333931490215!3d19.03677508711874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cec7f8a8a6db%3A0x5b0c5a8f8a8a8a8a!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        </div>
+       
       </div>
     </div>
   );
