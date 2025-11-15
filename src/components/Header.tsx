@@ -34,7 +34,7 @@ function Header({ activeSection, setActiveSection }: HeaderProps) {
             <img
               src="/logo2.jpg"
               alt="SSconsultants Logo"
-              className="w-40 md:w-60 scale-180 h-auto object-contain"
+              className="w-40 md:w-60 scale-174 h-auto object-contain"
               style={{ transformOrigin: "left center" }}
             />
           </div>
