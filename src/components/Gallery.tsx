@@ -164,7 +164,10 @@ function Gallery() {
     <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div className="text-center mb-14 mt-14"> 
-        <h1 className="text-5xl font-bold text-gray-900 mb-4">SOME OF OUR  <span className='text-[#fd5d14]'>POPULAR</span> <br/> DREAM PROJECTS</h1> 
+<h1 className="text-3xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+  SOME OF OUR <span className="text-[#fd5d14]">POPULAR</span> <br /> DREAM PROJECTS
+</h1>
+ 
         <div className="w-44 h-1 bg-[#29387D] mx-auto mb-4"></div>
         </div>
 
