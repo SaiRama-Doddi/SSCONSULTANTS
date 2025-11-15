@@ -1,5 +1,5 @@
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 interface HeaderProps {
   activeSection: string;
@@ -10,11 +10,11 @@ function Header({ activeSection, setActiveSection }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'home', label: 'HOME' },
-    { id: 'about', label: 'ABOUT' },
-    { id: 'services', label: 'SERVICES' },
-    { id: 'gallery', label: 'GALLERY' },
-    { id: 'contact', label: 'CONTACT' },
+    { id: "home", label: "HOME" },
+    { id: "about", label: "ABOUT" },
+    { id: "services", label: "SERVICES" },
+    { id: "gallery", label: "GALLERY" },
+    { id: "contact", label: "CONTACT" },
   ];
 
   const handleNavClick = (section: string) => {
@@ -29,16 +29,14 @@ function Header({ activeSection, setActiveSection }: HeaderProps) {
           {/* ------- BIGGER LOGO -------- */}
           <div
             className="flex items-center cursor-pointer"
-            onClick={() => setActiveSection('home')}
+            onClick={() => setActiveSection("home")}
           >
-<img
-  src="/logo2.jpg"
-  alt="SSconsultants Logo"
-  className="w-40 md:w-60 scale-150 h-auto object-contain"
-  style={{ transformOrigin: "left center" }}
-/>
-
-
+            <img
+              src="/logo2.jpg"
+              alt="SSconsultants Logo"
+              className="w-40 md:w-60 scale-150 h-auto object-contain"
+              style={{ transformOrigin: "left center" }}
+            />
           </div>
 
           {/* -------- DESKTOP NAV ---------- */}
@@ -49,8 +47,8 @@ function Header({ activeSection, setActiveSection }: HeaderProps) {
                 onClick={() => handleNavClick(item.id)}
                 className={`text-lg tracking-wide cursor-pointer font-semibold transition-colors duration-200 ${
                   activeSection === item.id
-                    ? 'text-[#fd5d14] border-b-2 border-[#fd5d14]'
-                    : 'text-white hover:text-[#fd5d14]'
+                    ? "text-[#fd5d14] border-b-2 border-[#fd5d14]"
+                    : "text-white hover:text-[#fd5d14]"
                 } pb-1`}
               >
                 {item.label}
@@ -82,8 +80,8 @@ function Header({ activeSection, setActiveSection }: HeaderProps) {
                 onClick={() => handleNavClick(item.id)}
                 className={`block w-full text-left px-4 py-3 rounded-lg text-lg font-semibold ${
                   activeSection === item.id
-                    ? 'text-[#fd5d14]'
-                    : 'text-white hover:bg-[#fd5d14]'
+                    ? "text-[#fd5d14]"
+                    : "text-white hover:bg-[#fd5d14]"
                 }`}
               >
                 {item.label}

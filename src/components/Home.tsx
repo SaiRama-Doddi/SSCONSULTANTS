@@ -4,6 +4,7 @@ import {Landmark, Building2, Layers } from "lucide-react";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import ServicesHome from './ServiceHome';
+import VisionMissionCarousel from './VisionMissionCarousel';
 
 interface Slide {
   image: string;
@@ -238,7 +239,7 @@ function Homes({setActiveSection}: HomeProps) {
   </div>
 </section>
 
-
+<VisionMissionCarousel/>
     </div>
   );
 }

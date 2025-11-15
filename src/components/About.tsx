@@ -37,24 +37,25 @@ function About() {
 
 
       {/* ⭐ MAIN CONTENT BELOW */}
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
       <div className=" p-10 md:p-14 max-auto mx-auto">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
 
     {/* IMAGE */}
-    <div>
-      <img
-        src="https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763101507/sir_knodfw.jpg"
-        alt="About Director"
-        className="rounded-2xl shadow-xl w-full h-[600px] object-cover"
-      />
-    </div>
+   <div className="border-t-6 border-l-6 border-[#fd5d14] rounded-xl shadow-xl">
+  <img
+    src="https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763101507/sir_knodfw.jpg"
+    alt="About Director"
+    className="rounded-xl w-full h-[580px] object-cover"
+  />
+</div>
+
 
     {/* TEXT SECTION */}
     <div className="space-y-6">
       <h2 className="text-4xl font-bold text-gray-900 uppercase">
-        About the Director
+        About <span className="text-[#fd5d14]">the director</span>
       </h2>
 
       <p className="text-gray-700 text-lg leading-relaxed font-medium">
