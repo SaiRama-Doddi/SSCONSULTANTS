@@ -112,7 +112,7 @@ function Footer({ setActiveSection }: FooterProps) {
       {/* COPYRIGHT */}
       <div className="mt-16 border-t border-gray-800 pt-6 text-center">
         <p className="text-gray-500 text-sm">
-          © {new Date().getFullYear()} SS Consultants — Designed with Precision & Excellence
+          © {new Date().getFullYear()} S.S CONSULATANTS — Designed with Precision & Excellence
         </p>
       </div>
     </footer>
