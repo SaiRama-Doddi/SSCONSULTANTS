@@ -15,40 +15,30 @@ function Gallery() {
   const images: GalleryImage[] = [
     {
       id: 1,
-      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102304/build10_f3xmfp.jpg',
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102296/build3_p26f8e.jpg',
       title: 'Modern Office Complex',
       category: 'architectural',
     },
     {
       id: 2,
-      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102297/build8_hbymkf.jpg',
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102296/build1_qfizhg.jpg',
       title: 'Residential Villa',
       category: 'residential',
     },
     {
       id: 3,
-      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102315/build22_hd5bnj.jpg',
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102297/build4_zcawhm.jpg',
       title: 'Construction Site',
       category: 'engineering',
     },
-    {
-      id: 4,
-      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102314/build19_fyddyh.jpg',
-      title: 'Glass Facade Building',
-      category: 'architectural',
-    },
+   
     {
       id: 5,
-      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102306/build18_jwkgor.jpg',
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102297/build8_hbymkf.jpg',
       title: 'Luxury Apartment',
       category: 'residential',
     },
-    {
-      id: 6,
-      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102305/build11_fsx1xu.jpg',
-      title: 'Infrastructure Project',
-      category: 'engineering',
-    },
+  
     {
       id: 7,
       url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102301/build9_xeoglb.jpg',
@@ -57,13 +47,79 @@ function Gallery() {
     },
     {
       id: 8,
-      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102296/build3_p26f8e.jpg',
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102304/build10_f3xmfp.jpg',
       title: 'Modern Home Design',
       category: 'residential',
     },
     {
       id: 9,
-      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102297/build4_zcawhm.jpg',
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102305/build14_ujeldb.jpg',
+      title: 'Structural Engineering',
+      category: 'engineering',
+    },
+      {
+      id: 10,
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102305/build11_fsx1xu.jpg',
+      title: 'Structural Engineering',
+      category: 'engineering',
+    },
+      {
+      id: 11,
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102306/build17_zd2wbm.jpg',
+      title: 'Structural Engineering',
+      category: 'engineering',
+    },
+      {
+      id: 12,
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102306/build13_sstqxe.jpg',
+      title: 'Structural Engineering',
+      category: 'engineering',
+    },
+      {
+      id: 13,
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102306/build15_wrjlcx.jpg',
+      title: 'Structural Engineering',
+      category: 'engineering',
+    },
+      {
+      id: 14,
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102306/build18_jwkgor.jpg',
+      title: 'Structural Engineering',
+      category: 'engineering',
+    },
+      {
+      id: 15,
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102306/build12_qoipn6.jpg',
+      title: 'Structural Engineering',
+      category: 'engineering',
+    },
+      {
+      id: 16,
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102314/build20_os9gpx.jpg',
+      title: 'Structural Engineering',
+      category: 'engineering',
+    },
+      {
+      id: 17,
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102307/build16_wf4yy9.jpg',
+      title: 'Structural Engineering',
+      category: 'engineering',
+    },
+      {
+      id: 18,
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102315/build22_hd5bnj.jpg',
+      title: 'Structural Engineering',
+      category: 'engineering',
+    },
+      {
+      id: 19,
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102316/build23_r1n389.jpg',
+      title: 'Structural Engineering',
+      category: 'engineering',
+    },
+      {
+      id: 21,
+      url: 'https://res.cloudinary.com/dtxi8vdkq/image/upload/v1763102315/build21_m8rxi4.jpg',
       title: 'Structural Engineering',
       category: 'engineering',
     },
@@ -123,7 +179,7 @@ function Gallery() {
         <img
           src={image.url}
           alt={image.title}
-          className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+          className="w-full h-80 object-fit transform group-hover:scale-110 transition-transform duration-500"
         />
 
         {/* CLEAN HOVER OVERLAY (NO TEXT) */}
