@@ -24,7 +24,7 @@ function Header({ activeSection, setActiveSection }: HeaderProps) {
 
   return (
     <header className="bg-[#29387D] shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           {/* ------- BIGGER LOGO -------- */}
           <div
@@ -34,7 +34,7 @@ function Header({ activeSection, setActiveSection }: HeaderProps) {
             <img
               src="/logo2.jpg"
               alt="SSconsultants Logo"
-              className="w-40 md:w-60 scale-150 h-auto object-contain"
+              className="w-40 md:w-60 scale-180 h-auto object-contain"
               style={{ transformOrigin: "left center" }}
             />
           </div>
