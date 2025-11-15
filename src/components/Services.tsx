@@ -227,9 +227,24 @@ function Services() {
             <p className="text-lg mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to bring your vision to life.
             </p>
-            <button className="bg-white text-[#29387D] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-              Get In Touch
-            </button>
+  <button
+  className="bg-white text-[#29387D] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition cursor-pointer"
+  onClick={() => {
+    const email = "ssconsultantskkd@gmail.com";
+    const subject = "Inquiry from Website";
+    const body = "Hello, I would like to get in touch regarding your services.";
+
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.open(gmailURL, "_blank");
+  }}
+>
+  Get In Touch
+</button>
+
+
           </div>
         </div>
       </div>
