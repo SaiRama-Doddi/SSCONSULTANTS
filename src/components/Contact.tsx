@@ -75,13 +75,12 @@ function Contact() {
             />
 
          <div className="w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden shadow-lg">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15205.3412782729!2d83.197952!3d17.6816128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1763122390394!5m2!1sen!2sin"
-            className="w-full h-full border-0"
+         
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3815.8091355106026!2d82.23815867492509!3d16.983936183836057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a38297a9c61c58d%3A0xcea76c83c907e0e3!2sSRI%20SATYASAI%20SIDDHARTHA%20RESTAURANT!5e0!3m2!1sen!2sin!4v1763220887491!5m2!1sen!2sin"
+   className="w-full h-full border-0"
             allowFullScreen
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+            referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
           </div>
 
